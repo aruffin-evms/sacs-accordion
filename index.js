@@ -23,7 +23,7 @@ const subLevels = {
 const text = document.getElementById("text");
 
 const menuWidth = 500;
-const subLevelHeight = 300;
+const subLevelHeight = 500;
 const subLevelInitHeight = 0;
 
 // for init build
@@ -58,7 +58,7 @@ function showNav() {
 }
 
 function showLevel(subLevel) {
-  subLevel.style.height = subLevelHeight + "px";
+  subLevel.style.height = subLevelHeight + 'px';
   // text.style.opacity = 1
   console.log(subLevel.id);
   console.log(subLevel.style.height);
