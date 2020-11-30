@@ -1,3 +1,7 @@
+const menuWidth = 500;
+const subLevelMaxHeight = 5000;
+const subLevelInitHeight = 0;
+
 const sidenav = document.getElementById("sidenav");
 const main = document.getElementById("main");
 const button = document.getElementById("button");
@@ -5,7 +9,13 @@ const button = document.getElementById("button");
 const levels = document.querySelectorAll(".sacs__menu-level");
 const plusMinusIcons = document.querySelectorAll('.sacs__plus-minus-toggle')
 
-// object for first level of nesting
+const firstExToggle = document.getElementById('firstExToggle')
+const firstDocToggle = document.getElementById('firstDocToggle')
+
+const secExToggle = document.getElementById('secExToggle')
+const secDocToggle = document.getElementById('secDocToggle')
+
+// first level of nesting
 const subLevels = {
   levelOne: document.getElementById("subLevelOne"),
   levelTwo: document.getElementById('subLevelTwo'),
@@ -20,11 +30,24 @@ const subLevels = {
   levelEleven: document.getElementById('subLevelEleven'),
 }
 
-const text = document.getElementById("text");
+firstExToggle.addEventListener('click', function() {
+  firstExToggle.innerHTML = 'remove'
+  firstDocToggle.classList.toggle("docs-menu__open")
 
-const menuWidth = 500;
-const subLevelHeight = 500;
-const subLevelInitHeight = 0;
+  if(!firstDocToggle.classList.contains('docs-menu__open')) {
+    firstExToggle.innerHTML = 'add'
+  }
+})
+
+secExToggle.addEventListener('click', function() {
+  secExToggle.innerHTML = 'remove'
+
+  secDocToggle.classList.toggle("docs-menu__open")
+  
+  if(!secDocToggle.classList.contains('docs-menu__open')) {
+    secExToggle.innerHTML = 'add'
+  }
+})
 
 // for init build
 main.style.marginLeft = menuWidth + "px";
@@ -47,10 +70,10 @@ plusMinusIcons.forEach(function(icon) {
   })
 })
 
-button.addEventListener("click", showNav);
-function hideNav() {
-  sidenav.style.width = "0";
-}
+// button.addEventListener("click", showNav);
+// function hideNav() {
+//   sidenav.style.width = "0";
+// }
 
 function showNav() {
   sidenav.style.width = menuWidth + "px";
@@ -58,14 +81,13 @@ function showNav() {
 }
 
 function showLevel(subLevel) {
-  subLevel.style.height = subLevelHeight + 'px';
-  // text.style.opacity = 1
-  console.log(subLevel.id);
-  console.log(subLevel.style.height);
+  subLevel.style.maxHeight = subLevelMaxHeight + 'px';
+  // subLevel.classList.add('active')
+  // localStorage.setItem()
 }
 
 function hideLevel(subLevel) {
-  subLevel.style.height = subLevelInitHeight + "px";
+  subLevel.style.maxHeight = subLevelInitHeight + 'px';
 }
 
 function hideSubLevel(id) {

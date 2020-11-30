@@ -4,46 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="https://www.evms.edu/sacscoc_2020/style.css"> -->
+  <!-- fonts from evms.edu -->
+  <link rel="stylesheet" type="text/css" href="//www.evms.edu/media/evms_public/content/style_assets/refresh_2018_style_assets/css/fonts.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <title>SACS site</title>
 </head>
 
 <body>
   <div id="sidenav" class="sacs__side-menu">
     <!-- level one - root -->
-    <div id="menuLevelOne" class="sacs__menu-level">
+    <!-- <div id="menuLevelOne" class="sacs__menu-level">
       <div class="sacs__menu__circle-plus sacs__menu__closed">
         <div class="sacs__menu__circle">
           <div class="sacs__menu__horizontal">
           </div>
           <div class="sacs__menu__vertical"></div>
         </div>
-        <a href="www.google.com" target="_blank" class="sacs__menu-level--one sacs__menu__level-label">
+        <a href="" target="_blank" class="sacs__menu-level--one sacs__menu__level-label">
           Signatures
         </a>
       </div>
-    </div>
+    </div> -->
     <!-- level two - first sub level -->
-    <div id="subLevelOne" class="sacs__menu-sub-level">
+    <!-- <div id="subLevelOne" class="sacs__menu-sub-level">
       <div id="subLevelOneContent" class="sacs__menu-sub-level__content">
         <div class="sacs__menu-sub-level__item">
           <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita!</a>
-        </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link">Lorem ipsum dolor, sit amet consectetur adipisicing.</a>
-        </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, quos sunt?</a>
-        </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link">Lorem ipsum dolor sit amet consectetur.</a>
+          <a href="" class="sacs__menu-sub-level__link">[Signatures Doc]</a>
         </div>
       </div>
-    </div>
+    </div> -->
     <div id="menuLevelTwo" class="sacs__menu-level">
       <div class="sacs__menu__circle-plus sacs__menu__closed">
         <div class="sacs__menu__circle">
@@ -55,7 +48,12 @@
       </div>
     </div>
     <div id="subLevelTwo" class="sacs__menu-sub-level">
-
+      <div id="subLevelTwoContent" class="sacs__menu-sub-level__content">
+        <div class="sacs__menu-sub-level__item">
+          <div class="sacs__plus-minus-toggle"></div>
+          <a href="" class="sacs__menu-sub-level__link">EVMS Institutional Compliance Report Listing of Acronyms by Section</a>
+        </div>
+      </div>
     </div>
     <div id="menuLevelThree" class="sacs__menu-level">
       <div class="sacs__menu__circle-plus sacs__menu__closed">
@@ -90,7 +88,7 @@
           <div class="sacs__plus-minus-toggle"></div>
           <a href="" class="sacs__menu-sub-level__link">EVMS Bylaws - full</a>
         </div>
-        <div class="sacs__menu-sub-level__item">
+        <div id="compliance" href="#complianceCert" class="sacs__menu-sub-level__item">
           <div class="sacs__plus-minus-toggle"></div>
           <a href="" class="sacs__menu-sub-level__link">EVMS Compliance Certification</a>
         </div>
@@ -211,16 +209,28 @@
     <div id="subLevelFive" class="sacs__menu-sub-level">
       <div id="subLevelFiveContent" class="sacs__menu-sub-level__content">
         <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link">Introductory Information for Reviewers - Accreditation</a>
+          <span id="firstExToggle" class="sacs__plus-minus-toggle material-icons">add</span>
+          <a href="" class="sacs__menu-sub-level__link">Introductory Information for Reviewers - Accreditation [has docs - no links]</a>
+        </div>
+        <div id="firstDocToggle" class="sacs__menu__docs">
+          <a href="" class="sacs__menu__doc">Document 1</a>
+          <a href="" class="sacs__menu__doc">Document 2</a>
         </div>
         <div class="sacs__menu-sub-level__item">
           <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link">1.1 The Principle of Integrity - Accreditation</a>
+          <a href="https://www.evms.edu/sacscoc_2020/evms_sacscoc_compliance_2019/11_the_principle_of_integrity/" class="sacs__menu-sub-level__link">1.1 The Principle of Integrity - Accreditation</a>
         </div>
         <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link">2.1 Mission - Accreditation</a>
+          <span id="secExToggle" class="sacs__plus-minus-toggle material-icons">add</span>
+          <a href="https://www.evms.edu/sacscoc_2020/evms_sacscoc_compliance_2019/21_mission/" class="sacs__menu-sub-level__link">2.1 Mission - Accreditation [has docs w/ links</a>
+        </div>
+        <div id="secDocToggle" class="sacs__menu__docs">
+          <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/2-1_mission/[1]_December_2016_Board_of_Visitors_Meeting_Minutes,_Page_5.pdf" class="sacs__menu__doc">[1] December 2016 Board of Visitors Meeting Minutes, Page 5</a>
+          <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/2-1_mission/[2]_EVMS_Strategic_Plan,_Page_7.pdf" class="sacs__menu__doc">[2] EVMS Strategic Plan, Page 7</a>
+          <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/2-1_mission/[3]_March_2018_Board_of_Visitors_Meeting_Minutes,_Page_3.pdf" class="sacs__menu__doc">[3] March 2018 Board of Visitors Meeting Minutes, Page 3</a>
+          <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/2-1_mission/[4]_EVMS_Mission,_Values,_and_Vision_Statement.pdf" class="sacs__menu__doc">[4] EVMS Mission, Values, and Vision Statement</a>
+          <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/2-1_mission/[5]_EVMS_Institutional_Student_Handbook,_Page_7.pdf" class="sacs__menu__doc">[5] EVMS Institutional Student Handbook, Page 7</a>
+          <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/2-1_mission/[6]_EVMS_Faculty_Handbook,_Page_7-8.pdf" class="sacs__menu__doc">[6] EVMS Faculty Handbook, Page 7-8</a>
         </div>
         <div class="sacs__menu-sub-level__item">
           <div class="sacs__plus-minus-toggle"></div>
@@ -366,50 +376,6 @@
           <div class="sacs__plus-minus-toggle"></div>
           <a href="" class="sacs__menu-sub-level__link">9.2 Educational Program Stucture and Content</a>
         </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link"></a>
-        </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link"></a>
-        </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link"></a>
-        </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link"></a>
-        </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link"></a>
-        </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link"></a>
-        </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link"></a>
-        </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link"></a>
-        </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link"></a>
-        </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link"></a>
-        </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link"></a>
-        </div>
       </div>
     </div>
     <div id="menuLevelSix" class="sacs__menu-level">
@@ -419,7 +385,7 @@
           </div>
           <div class="sacs__menu__vertical"></div>
         </div>
-        <a class="sacs__menu-level--six sacs__menu__level-label">Lorem ipsum dolor sit amet.</a>
+        <a class="sacs__menu-level--six sacs__menu__level-label">EVMS Facts & Figures 2018</a>
       </div>
     </div>
     <div id="subLevelSix" class="sacs__menu-sub-level">
@@ -432,8 +398,7 @@
           </div>
           <div class="sacs__menu__vertical"></div>
         </div>
-        <a class="sacs__menu-level--seven sacs__menu__level-label">Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Quia.</a>
+        <a class="sacs__menu-level--seven sacs__menu__level-label">EVMS Institutional Student Handbook</a>
       </div>
     </div>
     <div id="subLevelSeven" class="sacs__menu-sub-level">
@@ -446,8 +411,7 @@
           </div>
           <div class="sacs__menu__vertical"></div>
         </div>
-        <a class="sacs__menu-level--eight sacs__menu__level-label">Lorem ipsum dolor sit amet consectetur, adipisicing
-          elit. Illum, eligendi.</a>
+        <a class="sacs__menu-level--eight sacs__menu__level-label">EVMS Institutional Summary</a>
       </div>
     </div>
     <div id="subLevelEight" class="sacs__menu-sub-level">
@@ -460,14 +424,13 @@
           </div>
           <div class="sacs__menu__vertical"></div>
         </div>
-        <a class="sacs__menu-level--nine sacs__menu__level-label">Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Porro mollitia beatae commodi corrupti.</a>
+        <a class="sacs__menu-level--nine sacs__menu__level-label">QEP 2.7.20 Final</a>
       </div>
     </div>
     <div id="subLevelNine" class="sacs__menu-sub-level">
 
     </div>
-    <div id="menuLevelTen" class="sacs__menu-level">
+    <!-- <div id="menuLevelTen" class="sacs__menu-level">
       <div class="sacs__menu__circle-plus sacs__menu__closed">
         <div class="sacs__menu__circle">
           <div class="sacs__menu__horizontal">
@@ -494,7 +457,7 @@
     </div>
     <div id="subLevelEleven" class="sacs__menu-sub-level">
 
-    </div>
+    </div> -->
   </div>
   </div>
   <main id="main" class="sacs">
@@ -506,6 +469,7 @@
       <p>Page content</p>
     </div>
   </main>
+  <!-- <script src="https://www.evms.edu/sacscoc_2020/index.js"></script> -->
   <script src="index.js"></script>
 </body>
 
