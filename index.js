@@ -15,6 +15,16 @@ const firstDocToggle = document.getElementById('firstDocToggle')
 const secExToggle = document.getElementById('secExToggle')
 const secDocToggle = document.getElementById('secDocToggle')
 
+const thirdExToggle = document.getElementById('thirdExToggle')
+const thirdDocToggle = document.getElementById('thirdDocToggle')
+
+const fourthExToggle = document.getElementById('fourthExToggle')
+const fourthDocToggle = document.getElementById('fourthDocToggle')
+
+const fifthExToggle = document.getElementById('fifthExToggle')
+const fifthDocToggle = document.getElementById('fifthDocToggle')
+
+
 // first level of nesting
 const subLevels = {
   levelOne: document.getElementById("subLevelOne"),
@@ -46,6 +56,36 @@ secExToggle.addEventListener('click', function() {
   
   if(!secDocToggle.classList.contains('docs-menu__open')) {
     secExToggle.innerHTML = 'add'
+  }
+})
+
+thirdExToggle.addEventListener('click', function() {
+  thirdExToggle.innerHTML = 'remove'
+
+  thirdDocToggle.classList.toggle("docs-menu__open")
+  
+  if(!thirdDocToggle.classList.contains('docs-menu__open')) {
+    thirdExToggle.innerHTML = 'add'
+  }
+})
+
+fourthExToggle.addEventListener('click', function() {
+  fourthExToggle.innerHTML = 'remove'
+
+  fourthDocToggle.classList.toggle("docs-menu__open")
+  
+  if(!fourthDocToggle.classList.contains('docs-menu__open')) {
+    fourthExToggle.innerHTML = 'add'
+  }
+})
+
+fifthExToggle.addEventListener('click', function() {
+  fifthExToggle.innerHTML = 'remove'
+
+  fifthDocToggle.classList.toggle("docs-menu__open")
+  
+  if(!fifthDocToggle.classList.contains('docs-menu__open')) {
+    fifthExToggle.innerHTML = 'add'
   }
 })
 

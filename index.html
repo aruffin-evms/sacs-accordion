@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <!-- <link rel="stylesheet" href="https://www.evms.edu/sacscoc_2020/style.css"> -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="https://www.evms.edu/sacscoc_2020/style.css">
   <!-- fonts from evms.edu -->
   <link rel="stylesheet" type="text/css" href="//www.evms.edu/media/evms_public/content/style_assets/refresh_2018_style_assets/css/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="//www.evms.edu/media/evms_public/content/style_assets/refresh_2018_style_assets/css/in-page-styles.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -14,6 +15,16 @@
 </head>
 
 <body>
+  <div class="sacs__header">
+    <div class="sacs__logo-wrapper">
+      <img src="https://www.evms.edu/media/evms_public/content/style_assets/refresh_2018_style_assets/images/evmsLogoBlue.svg" alt="EVMS logo" class="sacs__logo">
+    </div>
+  </div>
+  <div class="sacs__banner">
+    <h1 class="sacs__page-title">
+      <t4 type="title" />
+		</h1>
+  </div>
   <div id="sidenav" class="sacs__side-menu">
     <!-- level one - root -->
     <!-- <div id="menuLevelOne" class="sacs__menu-level">
@@ -210,11 +221,11 @@
       <div id="subLevelFiveContent" class="sacs__menu-sub-level__content">
         <div class="sacs__menu-sub-level__item">
           <span id="firstExToggle" class="sacs__plus-minus-toggle material-icons">add</span>
-          <a href="" class="sacs__menu-sub-level__link">Introductory Information for Reviewers - Accreditation [has docs - no links]</a>
+          <a href="" class="sacs__menu-sub-level__link">Introductory Information for Reviewers - Accreditation</a>
         </div>
         <div id="firstDocToggle" class="sacs__menu__docs">
-          <a href="" class="sacs__menu__doc">Document 1</a>
-          <a href="" class="sacs__menu__doc">Document 2</a>
+          <a href="" class="sacs__menu__doc">[1] EVMS Institutional Summary</a>
+          <a href="" class="sacs__menu__doc">[2] EVMS Compliance Certification</a>
         </div>
         <div class="sacs__menu-sub-level__item">
           <div class="sacs__plus-minus-toggle"></div>
@@ -222,7 +233,7 @@
         </div>
         <div class="sacs__menu-sub-level__item">
           <span id="secExToggle" class="sacs__plus-minus-toggle material-icons">add</span>
-          <a href="https://www.evms.edu/sacscoc_2020/evms_sacscoc_compliance_2019/21_mission/" class="sacs__menu-sub-level__link">2.1 Mission - Accreditation [has docs w/ links</a>
+          <a href="https://www.evms.edu/sacscoc_2020/evms_sacscoc_compliance_2019/21_mission/" class="sacs__menu-sub-level__link">2.1 Mission - Accreditation</a>
         </div>
         <div id="secDocToggle" class="sacs__menu__docs">
           <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/2-1_mission/[1]_December_2016_Board_of_Visitors_Meeting_Minutes,_Page_5.pdf" class="sacs__menu__doc">[1] December 2016 Board of Visitors Meeting Minutes, Page 5</a>
@@ -233,20 +244,29 @@
           <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/2-1_mission/[6]_EVMS_Faculty_Handbook,_Page_7-8.pdf" class="sacs__menu__doc">[6] EVMS Faculty Handbook, Page 7-8</a>
         </div>
         <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link">3.1.a Basic Eligibility Standard - Accreditation</a>
+          <span id="thirdExToggle" class="sacs__plus-minus-toggle material-icons">add</span>
+          <a href="https://www.evms.edu/sacscoc_2020_build/evms_sacscoc_compliance_2019/31a_basic_eligibility_standard/" class="sacs__menu-sub-level__link">3.1.a Basic Eligibility Standard - Accreditation</a>
+        </div>
+        <div id="thirdDocToggle" class="sacs__menu__docs">
+          <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/3-1-a_basic_eligibility_standard/[1]_Enabling_Legislation-Charter.pdf" class="sacs__menu__doc">[1] Enabling Legislation-Charter</a>
+          <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/3-1-a_basic_eligibility_standard/[2]_State_Council_of_Higher_Education_for_Virginia_2018-2019_Report.pdf" class="sacs__menu__doc">[2] State Council of Higher Education for Virginia 2018-2019 Report</a>
+          <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/3-1-a_basic_eligibility_standard/[3]_State_Council_of_Higher_Education_for_Virginia_Exemption.pdf" class="sacs__menu__doc">[3] State Council of Higher Education for Virginia Exemption</a>
+          <!-- <a href="" class="sacs__menu__doc"></a> -->
         </div>
         <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link">3.1.b Basic Eligibility Standard</a>
+          <span id="fourthExToggle" class="sacs__plus-minus-toggle material-icons">add</span>
+          <a href="https://www.evms.edu/sacscoc_2020_build/evms_sacscoc_compliance_2019/31b_basic_eligibility_standard/" class="sacs__menu-sub-level__link">3.1.b Basic Eligibility Standard</a>
+        </div>
+        <div id="fourthDocToggle" class="sacs__menu__docs">
+          <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/3-1-b_basic_eligibility_standard/[1]_Sample_of__Redacted_Transcripts_-_Masters,_PhD,_and_MD.pdf" class="sacs__menu__doc">[1] Sample of Redacted Transcripts - Masters, PhD, and MD</a>
         </div>
         <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link">3.1.c Basic Eligibility Standard - Accreditation</a>
+          <span id="fifthExToggle" class="sacs__plus-minus-toggle material-icons">add</span>
+          <a href="https://www.evms.edu/sacscoc_2020_build/evms_sacscoc_compliance_2019/31c_basic_eligibility_standard/" class="sacs__menu-sub-level__link">3.1.c Basic Eligibility Standard - Accreditation</a>
         </div>
-        <div class="sacs__menu-sub-level__item">
-          <div class="sacs__plus-minus-toggle"></div>
-          <a href="" class="sacs__menu-sub-level__link">[2] Student Enrollment Report 1973-2018 - Programs</a>
+        <div id="fifthDocToggle" class="sacs__menu__docs">
+          <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/3-1-c_basic_eligibility_standard/[1]_Student_Enrollment_Report_1973-2018_schools.pdf" class="sacs__menu__doc">[1] Student Enrollment Report 1973-2018 schools</a>
+          <a href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/3-1-c_basic_eligibility_standard/[2]_Student_Enrollment_Report_1973-2018_-_Programs.pdf" class="sacs__menu__doc">[2] Student Enrollment Report 1973-2018 - Programs</a>
         </div>
         <div class="sacs__menu-sub-level__item">
           <div class="sacs__plus-minus-toggle"></div>
@@ -461,7 +481,7 @@
   </div>
   </div>
   <main id="main" class="sacs">
-    <!-- <button id="button">Push</button> -->
+    <t4 type="navigation" name="SACS 2020 breadcrumb" id="841" />
     <div class="sacs__intro">
       <p>SACS welcome message</p>
     </div>
@@ -469,8 +489,16 @@
       <p>Page content</p>
     </div>
   </main>
-  <!-- <script src="https://www.evms.edu/sacscoc_2020/index.js"></script> -->
-  <script src="index.js"></script>
+  <footer class="sacs__footer">
+    <figure class="sacs__logo-wrapper">
+      <img src="https://www.evms.edu/media/evms_public/content/style_assets/refresh_2018_style_assets/images/evmsLogoBlue.svg" alt="EVMS logo" class="sacs__logo">
+    </figure>
+    <div class="sacs__location-info">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, deserunt</p>
+    </div>
+  </footer>
+  <script src="https://www.evms.edu/sacscoc_2020/index.js"></script>
+  <!-- <script src="index.js"></script> -->
 </body>
 
 </html>

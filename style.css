@@ -3,6 +3,24 @@
   padding: 0;
 }
 
+html, body {
+  font-size: 16px !important;
+}
+
+h1, h2, h3 {
+  margin: 0 !important;
+}
+
+h3 {
+  font-size: 2em !important;
+}
+
+p {
+  color: #212529;
+  margin-top: 15px;
+  font-size: 1em;
+}
+
 .active {
   background-color: gray;
 }
@@ -18,9 +36,9 @@
   height: auto;
   position: relative;
   width: 21px;
-  display: flex;
-  align-self: center;
-  padding: 5px;
+  display: flex !important;
+  align-self: flex-start;
+  padding: 8px;
 }
 
 /* .sacs__plus-minus-toggle:hover {
@@ -53,14 +71,14 @@
 .sacs__side-menu {
   height: 100%;
   width: 500px;
-  position: fixed;
+  position: absolute;
   z-index: 1;
-  top: 0;
+  top: auto;
   left: 0;
   background-color: #fafafa;
   overflow-x: hidden;
   padding-top: 60px;
-  transition: 1s;
+  /* transition: 1s; */
   border-right: 1px solid rgb(160, 160, 160);
 }
 
@@ -83,7 +101,7 @@
   text-decoration: none;
   color: black;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .sacs__menu__level-label:hover {
@@ -97,14 +115,11 @@
   transition: max-height 1s ease;
 }
 
-.sacs__menu-sub-level__content {
-  /* overflow-y: scroll; */
-}
-
 .sacs__menu-sub-level__link {
   text-decoration: none;
   color: black;
   margin: 10px 0;
+  font-size: 16px;
 }
 
 .sacs__menu-sub-level__link:hover {
@@ -136,6 +151,7 @@
   color: black;
   text-decoration: none;
   padding: 10px;
+  font-size: 16px;
 }
 
 .sacs__menu__doc:hover {
@@ -210,7 +226,7 @@
   width: 3px;
   height: 30px;
   left: 50%;
-  margin-left: -2.5px;
+  margin-left: -1.6px;
   top: 50%;
   margin-top: -15px;
 }
@@ -218,10 +234,10 @@
 
 
 .sacs {
-  transition: 1s all;
+  /* transition: 1s all; */
   min-height: 100vh;
   padding: 30px;
-  /* font-family:; */
+  overflow-y: scroll;
 }
 
 .sacs__intro {
@@ -252,3 +268,50 @@
   text-align: center;
 }
 
+.sacs__breadcrumb {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.sacs__breadcrumb a {
+  color: #a0a0a0 !important;
+  text-decoration: none !important;
+  transition: 1s all;
+  padding: 0 5px;
+}
+
+.sacs__breadcrumb a:hover {
+  text-decoration: underline;
+  color: #c7531e !important;
+}
+
+.sacs__logo-wrapper {
+  padding: 30px 30px;
+}
+
+.sacs__banner {
+  height: auto;
+  width: 100%;
+  background-color: #1f7f9b;
+}
+
+.sacs__page-title {
+  padding: 30px 10%;
+  color: white;
+}
+
+.sacs__footer {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid gray;
+}
+
+.sacs__location-info {
+  width: 150px;
+  align-self: center;
+  padding-left: 40px;
+}
+
+.sacs__location-info p {
+  margin: 0 !important;
+}
