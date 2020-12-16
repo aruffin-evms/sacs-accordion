@@ -6,7 +6,11 @@ const sidenav = document.getElementById("sidenav");
 const main = document.getElementById("main");
 const button = document.getElementById("button");
 
-const levels = document.querySelectorAll(".sacs__menu-level");
+// debugging 
+const levels = document.querySelectorAll(".sacs__menu-level__wrapper");
+const docs = document.querySelectorAll('.sacs__menu__docs')
+
+// const levels = document.querySelectorAll(".sacs__menu-level");
 const plusMinusIcons = document.querySelectorAll('.sacs__plus-minus-toggle')
 
 const firstExToggle = document.getElementById('firstExToggle')
@@ -24,78 +28,108 @@ const fourthDocToggle = document.getElementById('fourthDocToggle')
 const fifthExToggle = document.getElementById('fifthExToggle')
 const fifthDocToggle = document.getElementById('fifthDocToggle')
 
+const drawerTrigger = document.getElementById('drawerTrigger')
+const triggerIcon = document.getElementById('triggerIcon')
 
-// first level of nesting
-const subLevels = {
-  levelOne: document.getElementById("subLevelOne"),
-  levelTwo: document.getElementById('subLevelTwo'),
-  levelThree: document.getElementById('subLevelThree'),
-  levelFour: document.getElementById('subLevelFour'),
-  levelFive: document.getElementById('subLevelFive'),
-  levelSix: document.getElementById('subLevelSix'),
-  levelSeven: document.getElementById('subLevelSeven'),
-  levelEight: document.getElementById('subLevelEight'),
-  levelNine: document.getElementById('subLevelNine'),
-  levelTen: document.getElementById('subLevelTen'),
-  levelEleven: document.getElementById('subLevelEleven'),
+const sacsNav = document.querySelector('.sacs__navigate-articles')
+
+// hide sacs nav on main page
+function hideSacsNav() {
+  if(window.location.href === 'https://www.evms.edu/sacscoc_2020/') {
+    sacsNav.style.display = 'none'
+  }
 }
 
-firstExToggle.addEventListener('click', function() {
-  firstExToggle.innerHTML = 'remove'
-  firstDocToggle.classList.toggle("docs-menu__open")
+function showParent() {
+  console.log(this)
+}
 
-  if(!firstDocToggle.classList.contains('docs-menu__open')) {
-    firstExToggle.innerHTML = 'add'
-  }
-})
+hideSacsNav()
 
-secExToggle.addEventListener('click', function() {
-  secExToggle.innerHTML = 'remove'
-
-  secDocToggle.classList.toggle("docs-menu__open")
+drawerTrigger.addEventListener('click', function() {
   
-  if(!secDocToggle.classList.contains('docs-menu__open')) {
-    secExToggle.innerHTML = 'add'
-  }
-})
-
-thirdExToggle.addEventListener('click', function() {
-  thirdExToggle.innerHTML = 'remove'
-
-  thirdDocToggle.classList.toggle("docs-menu__open")
+  // sidenav.classList.toggle('hide-menu')
+  sidenav.style.width = '10px'
+  triggerIcon.innerHTML = 'chevron_right'
+  drawerTrigger.style.left = '80% !important'
   
-  if(!thirdDocToggle.classList.contains('docs-menu__open')) {
-    thirdExToggle.innerHTML = 'add'
-  }
+  if (triggerIcon.innerHTML === 'chevron_right' && sidenav.style.width >= 400) {
+    sidenav.style.width = '440px'
+  } 
 })
 
-fourthExToggle.addEventListener('click', function() {
-  fourthExToggle.innerHTML = 'remove'
+// first level of nesting
+// const subLevels = {
+//   levelOne: document.getElementById("subLevelOne"),
+//   levelTwo: document.getElementById('subLevelTwo'),
+//   levelThree: document.getElementById('subLevelThree'),
+//   levelFour: document.getElementById('subLevelFour'),
+//   levelFive: document.getElementById('subLevelFive'),
+//   levelSix: document.getElementById('subLevelSix'),
+//   levelSeven: document.getElementById('subLevelSeven'),
+//   levelEight: document.getElementById('subLevelEight'),
+//   levelNine: document.getElementById('subLevelNine'),
+//   levelTen: document.getElementById('subLevelTen'),
+//   levelEleven: document.getElementById('subLevelEleven'),
+// }
 
-  fourthDocToggle.classList.toggle("docs-menu__open")
+// firstExToggle.addEventListener('click', function() {
+//   firstExToggle.innerHTML = 'remove'
+//   firstDocToggle.classList.toggle("docs-menu__open")
+
+//   if(!firstDocToggle.classList.contains('docs-menu__open')) {
+//     firstExToggle.innerHTML = 'add'
+//   }
+// })
+
+// secExToggle.addEventListener('click', function() {
+//   secExToggle.innerHTML = 'remove'
+
+//   secDocToggle.classList.toggle("docs-menu__open")
   
-  if(!fourthDocToggle.classList.contains('docs-menu__open')) {
-    fourthExToggle.innerHTML = 'add'
-  }
-})
+//   if(!secDocToggle.classList.contains('docs-menu__open')) {
+//     secExToggle.innerHTML = 'add'
+//   }
+// })
 
-fifthExToggle.addEventListener('click', function() {
-  fifthExToggle.innerHTML = 'remove'
+// thirdExToggle.addEventListener('click', function() {
+//   thirdExToggle.innerHTML = 'remove'
 
-  fifthDocToggle.classList.toggle("docs-menu__open")
+//   thirdDocToggle.classList.toggle("docs-menu__open")
   
-  if(!fifthDocToggle.classList.contains('docs-menu__open')) {
-    fifthExToggle.innerHTML = 'add'
-  }
-})
+//   if(!thirdDocToggle.classList.contains('docs-menu__open')) {
+//     thirdExToggle.innerHTML = 'add'
+//   }
+// })
+
+// fourthExToggle.addEventListener('click', function() {
+//   fourthExToggle.innerHTML = 'remove'
+
+//   fourthDocToggle.classList.toggle("docs-menu__open")
+  
+//   if(!fourthDocToggle.classList.contains('docs-menu__open')) {
+//     fourthExToggle.innerHTML = 'add'
+//   }
+// })
+
+// fifthExToggle.addEventListener('click', function() {
+//   fifthExToggle.innerHTML = 'remove'
+
+//   fifthDocToggle.classList.toggle("docs-menu__open")
+  
+//   if(!fifthDocToggle.classList.contains('docs-menu__open')) {
+//     fifthExToggle.innerHTML = 'add'
+//   }
+// })
 
 // for init build
-main.style.marginLeft = menuWidth + "px";
+// main.style.marginLeft = menuWidth + "px";
 
 levels.forEach(function (level) {
   level.addEventListener("click", function () {
     level.classList.toggle("sacs__menu__opened");
-    showSubLevel(this.id);
+    console.log(this.nextElementSibling)
+    showLevel(this.nextElementSibling);
 
     if (!level.classList.contains("sacs__menu__opened")) {
       hideSubLevel(this.id);
@@ -103,132 +137,138 @@ levels.forEach(function (level) {
   });
 });
 
+// function showNestedLevel() {
+  
+// }
+
 plusMinusIcons.forEach(function(icon) {
   icon.addEventListener('click', function() {
     icon.classList.toggle('collapsed')
-    console.log('click')
+    showLevel(this.nextElementSibling.nextElementSibling)
   })
 })
 
 // button.addEventListener("click", showNav);
-// function hideNav() {
-//   sidenav.style.width = "0";
-// }
+
+function hideNav() {
+  sidenav.style.maxWidth = "0";
+}
 
 function showNav() {
-  sidenav.style.width = menuWidth + "px";
-  main.style.marginLeft = menuWidth + "px";
+  sidenav.style.maxWidth = menuWidth + "px";
+  // main.style.marginLeft = menuWidth + "px";
 }
 
 function showLevel(subLevel) {
-  subLevel.style.maxHeight = subLevelMaxHeight + 'px';
-  // subLevel.classList.add('active')
-  // localStorage.setItem()
+  subLevel.classList.toggle('show-level');
 }
 
 function hideLevel(subLevel) {
   subLevel.style.maxHeight = subLevelInitHeight + 'px';
 }
 
-function hideSubLevel(id) {
-  switch (id) {
-    case (id = "menuLevelOne"):
-      hideLevel(subLevels.levelOne);
-      break;
 
-    case (id = "menuLevelTwo"):
-      hideLevel(subLevels.levelTwo);
-      break;
 
-    case (id = "menuLevelThree"):
-      hideLevel(subLevels.levelThree);
-      break;
+// function hideSubLevel(id) {
+//   switch (id) {
+//     case (id = "menuLevelOne"):
+//       hideLevel(subLevels.levelOne);
+//       break;
 
-    case (id = "menuLevelFour"):
-      hideLevel(subLevels.levelFour);
-      break;
+//     case (id = "menuLevelTwo"):
+//       hideLevel(subLevels.levelTwo);
+//       break;
 
-    case (id = "menuLevelFive"):
-      hideLevel(subLevels.levelFive);
-      break;
+//     case (id = "menuLevelThree"):
+//       hideLevel(subLevels.levelThree);
+//       break;
 
-    case (id = "menuLevelSix"):
-      hideLevel(subLevels.levelSix);
-      break;
+//     case (id = "menuLevelFour"):
+//       hideLevel(subLevels.levelFour);
+//       break;
 
-    case (id = "menuLevelSeven"):
-      hideLevel(subLevels.levelSeven);
-      break;
+//     case (id = "menuLevelFive"):
+//       hideLevel(subLevels.levelFive);
+//       break;
 
-    case (id = "menuLevelEight"):
-      hideLevel(subLevels.levelEight);
-      break;
+//     case (id = "menuLevelSix"):
+//       hideLevel(subLevels.levelSix);
+//       break;
 
-    case (id = "menuLevelNine"):
-      hideLevel(subLevels.levelNine);
-      break;
+//     case (id = "menuLevelSeven"):
+//       hideLevel(subLevels.levelSeven);
+//       break;
 
-    case (id = "menuLevelTen"):
-      hideLevel(subLevels.levelTen);
-      break;
+//     case (id = "menuLevelEight"):
+//       hideLevel(subLevels.levelEight);
+//       break;
 
-    case (id = "menuLevelEleven"):
-      hideLevel(subLevels.levelEleven);
-      break;
+//     case (id = "menuLevelNine"):
+//       hideLevel(subLevels.levelNine);
+//       break;
 
-    default:
-      break;
-  }
-}
+//     case (id = "menuLevelTen"):
+//       hideLevel(subLevels.levelTen);
+//       break;
 
-function showSubLevel(id) {
-  switch (id) {
-    case (id = "menuLevelOne"):
-      console.log("first called");
-      showLevel(subLevels.levelOne);
-      break;
+//     case (id = "menuLevelEleven"):
+//       hideLevel(subLevels.levelEleven);
+//       break;
 
-    case (id = "menuLevelTwo"):
-      showLevel(subLevels.levelTwo);
-      break;
+//     default:
+//       break;
+//   }
+// }
 
-    case (id = "menuLevelThree"):
-      showLevel(subLevels.levelThree);
-      break;
+// function showSubLevel(id) {
+//   switch (id) {
+//     case (id = "menuLevelOne"):
+//       console.log("first called");
+//       showLevel(subLevels.levelOne);
+//       break;
 
-    case (id = "menuLevelFour"):
-      showLevel(subLevels.levelFour);
-      break;
+//     case (id = "menuLevelTwo"):
+//       showLevel(subLevels.levelTwo);
+//       break;
 
-    case (id = "menuLevelFive"):
-      showLevel(subLevels.levelFive);
-      break;
+//     case (id = "menuLevelThree"):
+//       showLevel(subLevels.levelThree);
+//       break;
 
-    case (id = "menuLevelSix"):
-      showLevel(subLevels.levelSix);
-      break;
+//     case (id = "menuLevelFour"):
+//       showLevel(subLevels.levelFour);
+//       break;
 
-    case (id = "menuLevelSeven"):
-      showLevel(subLevels.levelSeven);
-      break;
+//     case (id = "menuLevelFive"):
+//       showLevel(subLevels.levelFive);
+//       break;
 
-    case (id = "menuLevelEight"):
-      showLevel(subLevels.levelEight);
-      break;
+//     case (id = "menuLevelSix"):
+//       showLevel(subLevels.levelSix);
+//       break;
 
-    case (id = "menuLevelNine"):
-      showLevel(subLevels.levelNine);
-      break;
+//     case (id = "menuLevelSeven"):
+//       showLevel(subLevels.levelSeven);
+//       break;
 
-    case (id = "menuLevelTen"):
-      showLevel(subLevels.levelTen);
-      break;
+//     case (id = "menuLevelEight"):
+//       showLevel(subLevels.levelEight);
+//       break;
 
-    case (id = "menuLevelEleven"):
-      showLevel(subLevels.levelEleven);
-      break;
+//     case (id = "menuLevelNine"):
+//       showLevel(subLevels.levelNine);
+//       break;
 
-    default:
-      break;
-  }
-}
+//     case (id = "menuLevelTen"):
+//       showLevel(subLevels.levelTen);
+//       break;
+
+//     case (id = "menuLevelEleven"):
+//       showLevel(subLevels.levelEleven);
+//       break;
+
+//     default:
+//       break;
+//   }
+// }
+
