@@ -1,57 +1,32 @@
-const menuWidth = 500;
-const subLevelMaxHeight = 5000;
-const subLevelInitHeight = 0;
+const menuWidth = 500
+const subLevelMaxHeight = 5000
+const subLevelInitHeight = 0
 
-const sidenav = document.getElementById("sidenav");
-const main = document.getElementById("main");
-const button = document.getElementById("button");
+const main = document.getElementById("main")
 
-// debugging 
-const levels = document.querySelectorAll(".sacs__menu-level__wrapper");
-const docs = document.querySelectorAll('.sacs__menu__docs')
-
+const levels = document.querySelectorAll(".sacs__menu-level__wrapper")
 const plusMinusIcons = document.querySelectorAll('.sacs__plus-minus-toggle')
 
-const firstExToggle = document.getElementById('firstExToggle')
-const firstDocToggle = document.getElementById('firstDocToggle')
-
-const secExToggle = document.getElementById('secExToggle')
-const secDocToggle = document.getElementById('secDocToggle')
-
-const thirdExToggle = document.getElementById('thirdExToggle')
-const thirdDocToggle = document.getElementById('thirdDocToggle')
-
-const fourthExToggle = document.getElementById('fourthExToggle')
-const fourthDocToggle = document.getElementById('fourthDocToggle')
-
-const fifthExToggle = document.getElementById('fifthExToggle')
-const fifthDocToggle = document.getElementById('fifthDocToggle')
-
-const closeMenu = document.getElementById('closeMenu')
-const triggerIcon = document.getElementById('triggerIcon')
 const openMenu = document.getElementById('openMenu')
-
-const sacsNav = document.querySelector('.sacs__navigate-articles')
-
-// hide sacs nav on main page
-function hideSacsNav() {
-  if(window.location.href === 'https://www.evms.edu/sacscoc_2020/') {
-    sacsNav.style.display = 'none'
-  }
-}
-
-hideSacsNav()
-
-function showParent() {
-  console.log(this)
-}
+const closeMenu = document.getElementById('closeMenu')
 
 function showOpenButton() {
-    openMenu.style.visibility = 'visible'
+  openMenu.style.visibility = 'visible'
+  closeMenu.style.visibility = 'hidden'
 }
 
 function hideOpenButton() {
   openMenu.style.visibility = 'hidden'
+  closeMenu.style.visibility = 'visible'
+}
+
+function showLevel(subLevel, icon) {
+  subLevel.classList.toggle('show-level')
+  icon.firstElementChild.innerHTML = 'remove'
+
+  if(!subLevel.classList.contains('show-level')) {
+    icon.firstElementChild.innerHTML = 'add'
+  }
 }
 
 openMenu.addEventListener('click', function() {
@@ -67,36 +42,18 @@ closeMenu.addEventListener('click', function() {
 
 levels.forEach(function (level) {
   level.addEventListener("click", function () {
-    level.classList.toggle("sacs__menu__opened");
-    console.log(this.nextElementSibling)
-    showLevel(this.nextElementSibling);
+    level.classList.toggle("sacs__menu__opened")
+    showLevel(this.nextElementSibling)
 
     if (!level.classList.contains("sacs__menu__opened")) {
-      hideSubLevel(this.id);
+      hideSubLevel(this.id)
     }
-  });
-});
+  })
+})
 
 plusMinusIcons.forEach(function(icon) {
   icon.addEventListener('click', function() {
     icon.classList.toggle('collapsed')
-    console.log(this.parentNode.nextElementSibling)
-    showLevel(this.parentNode.nextElementSibling)
+    showLevel(this.parentElement.nextElementSibling, this.parentElement.nextElementSibling.parentElement.firstElementChild)
   })
 })
-
-function hideNav() {
-  sidenav.style.maxWidth = "0";
-}
-
-function showNav() {
-  sidenav.style.maxWidth = menuWidth + "px";
-}
-
-function showLevel(subLevel) {
-  subLevel.classList.toggle('show-level');
-}
-
-function hideLevel(subLevel) {
-  subLevel.style.maxHeight = subLevelInitHeight + 'px';
-}

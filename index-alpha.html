@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <!-- <link rel="stylesheet" href="https://www.evms.edu/sacscoc_2020/style.css"> -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="https://www.evms.edu/sacscoc_2020/style.css">
   <!-- fonts from evms.edu -->
   <link rel="stylesheet" type="text/css"
     href="//www.evms.edu/media/evms_public/content/style_assets/refresh_2018_style_assets/css/fonts.css" />
@@ -24,15 +24,11 @@
     </div>
   </div>
   <ul id="sidenav" class="sacs__side-menu">
-    <!-- <button id="drawerTrigger" class="sacs__drawer-trigger">
-      <span id="triggerIcon" class="sacs__drawer-trigger__icon material-icons">chevron_left</span>
-    </button> -->
-    <a id="closeMenu" href="javascript:void(0)" class="sacs__menu__close-btn">&times;</a>
     <li>
       <span class="sacs__menu__icon-wrapper">
         <img src="./link-blue.png" alt="" class="sacs__menu__link-icon">
         <a href="https://www.evms.edu/sacscoc_2020/acronyms/" class="sacs__menu-level--two sacs__menu__level-label"
-          style="padding-left: 30px; color: #4b4b4b">Institutional Compliance Report Listing of Acronyms by Section</a>
+          >Institutional Compliance Report Listing of Acronyms by Section</a>
       </span>
     </li>
     <!-- Central Library -->
@@ -107,10 +103,13 @@
         </span>
         <a class="sacs__menu-level--four sacs__menu__level-label">Focused Report 2020</a>
       </span>
+      <ul class="sacs__menu-sub-level">
+        <li class="sacs__menu-sub-level__item">Item</li>
+      </ul>
     </li>
     <li class="sacs__menu-level">
       <span class="sacs__menu-level__wrapper">
-        <span class="sacs__menu__circle-plus sacs__menu__closed" onclick="showParent()">
+        <span class="sacs__menu__circle-plus sacs__menu__closed">
           <div class="sacs__menu__circle">
             <div class="sacs__menu__horizontal">
             </div>
@@ -128,7 +127,6 @@
               <a href="https://www.evms.edu/sacscoc_2020/evms_sacscoc_compliance_2019/introductory_information_for_reviewers/"
                 class="sacs__menu-sub-level__link">Introductory Information for Reviewers - Accreditation</a>
             </span>
-          </div>
           <ul class="sacs__menu__docs">
             <li><a
                 href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/introductory_information/[1]_EVMS_Institutional_Summary.pdf"
@@ -137,11 +135,11 @@
                 href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/introductory_information/[2]_EVMS_Compliance_Certification.pdf"
                 class="sacs__menu__doc">[2] EVMS Compliance Certification</a></li>
           </ul>
+        </div>
         </li>
-        <!-- <ul></ul> -->
         <li class="sacs__menu-sub-level__item">
           <a href="https://www.evms.edu/sacscoc_2020/evms_sacscoc_compliance_2019/11_the_principle_of_integrity/"
-            class="sacs__menu-sub-level__link">1.1 The Principle of Integrity - Accreditation</a>
+            class="sacs__menu-sub-level__link sacs__menu__stand-alone-link">1.1 The Principle of Integrity - Accreditation</a>
         </li>
         <li class="sacs__menu-sub-level__item">
           <div class="sacs__menu-sub-level__item-wrapper">
@@ -170,6 +168,7 @@
                   href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/2-1_mission/[6]_EVMS_Faculty_Handbook,_Page_7-8.pdf"
                   class="sacs__menu__doc">[6] EVMS Faculty Handbook, Page 7-8</a></li>
             </ul>
+          </div>
         </li>
         <li class="sacs__menu-sub-level__item">
           <div class="sacs__menu-sub-level__item-wrapper">
@@ -178,7 +177,6 @@
               <a href="https://www.evms.edu/sacscoc_2020_build/evms_sacscoc_compliance_2019/31a_basic_eligibility_standard/"
                 class="sacs__menu-sub-level__link">3.1.a Basic Eligibility Standard - Accreditation</a>
             </span>
-          </div>
           <ul class="sacs__menu__docs">
             <li><a
                 href="https://www.evms.edu/media/evms_public/sacs/2020/sacscoc_compliance_2019/3-1-a_basic_eligibility_standard/[1]_Enabling_Legislation-Charter.pdf"
@@ -225,31 +223,10 @@
         </li>
       </ul>
     </li>
-    <!-- <li class="sacs__menu-level">
-      <span class="material-icons" style="color: #1d7f9ac7; transform: scale(1.7); padding-left: 8px; height: max-content;">
-        link
-      </span>
-      <a href="https://www.evms.edu/sacscoc_2020/evms_facts__figures_2018/"class="sacs__menu-level--six sacs__menu__level-label" style="padding-left: 30px; color: #4b4b4b">Facts & Figures 2018</a>
-    </li>
-    <li class="sacs__menu-level">
-      <span class="material-icons" style="color: #1d7f9ac7; transform: scale(1.7); padding-left: 8px; height: max-content;">
-        link
-      </span>
-      <a href="https://www.evms.edu/sacscoc_2020/evms_institutional_student_handbook/" class="sacs__menu-level--seven sacs__menu__level-label" style="padding-left: 30px; color: #4b4b4b">Institutional Student Handbook</a>
-    </li>
-    <li class="sacs__menu-level">
-      <span class="material-icons" style="color: #1d7f9ac7; transform: scale(1.7); padding-left: 8px; height: max-content;">
-        link
-      </span>
-      <a href="https://www.evms.edu/sacscoc_2020/qep_2720_final/"class="sacs__menu-level--nine sacs__menu__level-label" style="padding-left: 30px; color: #4b4b4b">QEP 2.7.20 Final</a>
-    </li> -->
   </ul>
   <main id="main" class="sacs">
     <span id="openMenu" class="sacs__menu__open-btn material-icons">chevron_right</span>
-
-    <h1 style="padding-left: 5px; margin-bottom: 10px;">
-      <t4 type="title" />
-    </h1>
+    <span id="closeMenu" class="sacs__menu__close-btn material-icons">close</span>
     <t4 type="navigation" name="SACS 2020 breadcrumb" id="841" />
     <!-- <t4 type="navigation" name="SACS sitemap" id="842" /> -->
     <t4 type="navigation" name="SACS 2020 Link menu" id="843" />
