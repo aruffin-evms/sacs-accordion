@@ -1,11 +1,14 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
-}
+} */
 
 html,
 body {
   font-size: 16px !important;
+  margin: 0;
+  padding: 0;
+
 }
 
 h1,
@@ -20,7 +23,6 @@ h2 {
 
 ul {
   color: black !important;
-  list-style: none !important;
   padding-left: 0 !important;
   padding-top: 0;
   margin-left: 0;
@@ -33,9 +35,9 @@ ul {
   width: 5px;
 }
 
-/* li {
-  
-} */
+.footnote {
+  margin-bottom: 7px !important;
+}
 
 h3 {
   font-size: 2em !important;
@@ -80,7 +82,13 @@ p {
 .sacs__menu__link-icon {
   height: 27px;
   align-self: center;
-  margin-left: 16px;
+  margin-left: 9px;
+}
+
+.sacs__menu__link-icon--sub-level {
+  height: 18px;
+  align-self: center;
+  margin-right: 8px;
 }
 
 .sacs__menu__stand-alone-link {
@@ -93,7 +101,6 @@ p {
 }
 
 .sacs__menu__open-btn, .sacs__menu__close-btn {
-
   transition: 1s all;
   font-size: 50px !important;
   color: white !important;
@@ -141,7 +148,7 @@ p {
 
 .sacs__side-menu {
   height: 100%;
-  width: 394px;
+  width: 400px;
   position: absolute;
   z-index: 1;
   top: auto;
@@ -150,9 +157,10 @@ p {
   padding-top: 60px;
   padding-right: 20px;
   transition: 1s all;
-  border-right: 1px solid rgb(160, 160, 160);
   margin-top: 0;
   overflow: scroll;
+  list-style: none !important;
+  margin-left: 0;
 }
 
 .sacs__menu-level {
@@ -329,7 +337,7 @@ p {
   overflow-y: scroll;
   position: relative;
   z-index: 1;
-  margin-left: 440px;
+  margin-left: 400px;
   background-color: white;
   border-left: 1px solid gray;
 }
@@ -427,6 +435,9 @@ p {
   color: white;
 }
 
+.sacs__page-content {
+  margin-left: 50px;
+}
 .sacs__footer {
   display: flex;
   flex-direction: row;

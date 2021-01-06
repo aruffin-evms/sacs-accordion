@@ -1,6 +1,4 @@
 const menuWidth = 500
-const subLevelMaxHeight = 5000
-const subLevelInitHeight = 0
 
 const main = document.getElementById("main")
 
@@ -57,3 +55,4 @@ plusMinusIcons.forEach(function(icon) {
     showLevel(this.parentElement.nextElementSibling, this.parentElement.nextElementSibling.parentElement.firstElementChild)
   })
 })
+
