@@ -38,6 +38,7 @@ function showLevel(subLevel, icon) {
 
 openMenu.addEventListener("click", function () {
   main.style.marginLeft = menuWidth + 'px';
+  main.style.marginLeft = "400px";
   hideOpenButton();
 });
 

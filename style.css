@@ -122,12 +122,12 @@ p {
 }
 
 .sacs__menu__close-btn {
-  visibility: visible;
+  visibility: hidden;
   left: -115px;
 }
 
 .sacs__menu__open-btn {
-  visibility: hidden;
+  visibility: visible;
   left: -65px;
 }
 
@@ -345,7 +345,7 @@ p {
   overflow-y: scroll;
   position: relative;
   z-index: 1;
-  margin-left: 400px;
+  margin-left: 0;
   background-color: white;
   border-left: 1px solid gray;
 }
