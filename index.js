@@ -1,8 +1,10 @@
-const menuWidth = 500;
+const menuWidth = 400;
 
 const main = document.getElementById("main");
 
+// create a node list of levels
 const levels = document.querySelectorAll(".sacs__menu-level__wrapper");
+// create a node list of icons
 const plusMinusIcons = document.querySelectorAll(".sacs__plus-minus-toggle");
 
 const openMenu = document.getElementById("openMenu");
@@ -20,15 +22,18 @@ function hideOpenButton() {
 
 function showLevel(subLevel, icon) {
   subLevel.classList.toggle("show-level");
+  // change to minus icon
   icon.firstElementChild.innerHTML = "remove";
 
+  // is this level open
   if (!subLevel.classList.contains("show-level")) {
+    // change to plus icon
     icon.firstElementChild.innerHTML = "add";
   }
 }
 
 openMenu.addEventListener("click", function () {
-  main.style.marginLeft = "440px";
+  main.style.marginLeft = menuWidth + 'px';
   hideOpenButton();
 });
 
