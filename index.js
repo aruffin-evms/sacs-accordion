@@ -11,13 +11,17 @@ const openMenu = document.getElementById("openMenu");
 const closeMenu = document.getElementById("closeMenu");
 
 function showOpenButton() {
-  openMenu.style.visibility = "visible";
-  closeMenu.style.visibility = "hidden";
+  setTimeout(() => {
+    openMenu.style.visibility = "visible";
+    closeMenu.style.visibility = "hidden";
+  }, 900);
 }
 
 function hideOpenButton() {
+  setTimeout(() => {
   openMenu.style.visibility = "hidden";
   closeMenu.style.visibility = "visible";
+  }, 900);
 }
 
 function showLevel(subLevel, icon) {
